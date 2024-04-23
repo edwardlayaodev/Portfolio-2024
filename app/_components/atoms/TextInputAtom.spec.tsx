@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom'
-import { RenderResult, fireEvent, render, screen } from '@testing-library/react'
+import { RenderResult, render } from '@testing-library/react'
 import TextInputAtom from './TextInputAtom'
 describe('TextInput Component', () => {
   let component: RenderResult;
