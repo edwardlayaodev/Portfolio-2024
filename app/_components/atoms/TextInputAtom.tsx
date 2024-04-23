@@ -10,9 +10,10 @@ type Props = {
   label: string
   placeholder?: string
   size?: ThemeSize
+  value?: string
 }
 
-export default function TextInputAtom({ size = 'md', placeholder, position = 'horizontal', label, type, twClassInput }: Props) {
+export default function TextInputAtom({ value, size = 'md', placeholder, position = 'horizontal', label, type, twClassInput }: Props) {
 
   const positionClass = position == 'horizontal' ? 'flex-row gap-4' : 'flex-col gap-2'
 
@@ -27,7 +28,7 @@ export default function TextInputAtom({ size = 'md', placeholder, position = 'ho
     <div className={`flex ${positionClass}`}>
       <label className='input input-bordered flex items-center gap-2'>
         {label}
-        <input className={`${twClassInput} ${sizeClasses[size]}`} type={type} placeholder={placeholder} />
+        <input value={value} className={`${twClassInput} ${sizeClasses[size]}`} type={type} placeholder={placeholder} />
       </label>
     </div>
   )
