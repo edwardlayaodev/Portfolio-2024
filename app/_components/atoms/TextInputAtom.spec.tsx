@@ -1,16 +1,21 @@
 import '@testing-library/jest-dom'
-import { render, screen } from '@testing-library/react'
+import { RenderResult, fireEvent, render, screen } from '@testing-library/react'
 import TextInputAtom from './TextInputAtom'
 describe('TextInput Component', () => {
+  let component: RenderResult;
   beforeEach(() => {
-    render(<TextInputAtom type='text' label='label' placeholder='placeholder' />)
+    component = render(<TextInputAtom type='text' label='label' placeholder='placeholder' />)
   })
 
-  it('renders the texts properly', () => {
-    const label = screen.getByText('label')
-    const placeholder = screen.getByPlaceholderText('placeholder')
+  it('renders the label and placeholder', () => {
+    const label = component.getByText('label')
+    const placeholder = component.getByPlaceholderText('placeholder')
     expect(label).toBeInTheDocument()
     expect(placeholder).toBeInTheDocument()
   })
 
+  it('renders the value (state)', () => {
+    const value = component.getByText('default')
+    expect(value).toBeInTheDocument()
+  })
 })
