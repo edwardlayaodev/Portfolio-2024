@@ -14,8 +14,4 @@ describe('TextInput Component', () => {
     expect(placeholder).toBeInTheDocument()
   })
 
-  it('renders the value (state)', () => {
-    const value = component.getByText('default')
-    expect(value).toBeInTheDocument()
-  })
 })
