@@ -4,7 +4,7 @@ import CardAtom from './CardAtom';
 describe('Card Component', () => {
   let component: RenderResult;
   beforeEach(() => {
-    component = render(<CardAtom card={{ title: "title", desc: "desc", actions: [<button>OK</button>] }} />)
+    component = render(<CardAtom card={{ title: "title", desc: "desc", actions: [<button key={"1"}>OK</button>] }} />)
   })
 
   it('renders the title and description', () => {
