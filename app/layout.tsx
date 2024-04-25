@@ -4,6 +4,7 @@ import "./globals.css";
 import { ModalProvider } from "./_context/ModalContext";
 import ModalAtom from "./_components/atoms/ModalAtom";
 import CardAtom from "./_components/atoms/CardAtom";
+import NavbarOrganism from "./_components/organisms/NavbarOrganism";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       <ModalProvider>
         <body className={`${inter.className} relative`}>
           <ModalAtom />
+          <NavbarOrganism />
           {children}
         </body>
       </ModalProvider>
