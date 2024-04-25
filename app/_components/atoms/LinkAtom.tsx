@@ -8,6 +8,6 @@ type Props = {
 
 export default function LinkAtom({ children, url }: Props) {
   return (
-    <Link className='link' href={url}>{children}</Link>
+    <Link className='link link-hover' href={url}>{children}</Link>
   )
 }
