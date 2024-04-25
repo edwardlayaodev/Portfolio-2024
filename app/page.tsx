@@ -3,12 +3,9 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="hero min-h-screen bg-base-200">
-      <div className="hero-content text-center">
-        <div className="max-w-md">
-          <h1 className="text-5xl font-bold">Hello World</h1>
-          <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-          <button className="btn btn-primary">Get Started</button>
-        </div>
+      <div className="mockup-code text-left w-1/2">
+        <pre data-prefix="$" className="text-primary"><code>helloGreeting()</code></pre>
+        <pre data-prefix=">"><code>Greetings!, my name Is Edward Layao!</code></pre>
       </div>
     </div>
   );
