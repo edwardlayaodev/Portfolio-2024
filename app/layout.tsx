@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google"
 import "./globals.css";
 import { ModalProvider } from "./_context/ModalContext";
 import ModalAtom from "./_components/atoms/ModalAtom";
-import CardAtom from "./_components/atoms/CardAtom";
 import NavbarOrganism from "./_components/organisms/NavbarOrganism";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({ weight: "400", subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ModalProvider>
-        <body className={`${inter.className} relative`}>
+        <body className={`${roboto.className} relative`}>
           <ModalAtom />
           <NavbarOrganism />
           {children}
