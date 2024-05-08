@@ -3,9 +3,10 @@ import React, { useEffect, useState } from 'react'
 
 type Props = {
   text: string
+  speakingHandler: Function
 }
 
-export default function TypewriterAtom({ text }: Props) {
+export default function TypewriterAtom({ text, speakingHandler }: Props) {
   const [typewriter, setTypewriter] = useState("")
   const [typeFinished, setTypeFinished] = useState(false)
 
@@ -26,6 +27,12 @@ export default function TypewriterAtom({ text }: Props) {
     //clear interval when unmounted
     return () => clearInterval(typeInterval)
   }, [text])
+
+  useEffect(() => {
+    console.log("Speaking!!!")
+    if (typeFinished) speakingHandler(false)
+    else speakingHandler(true)
+  }, [typeFinished])
 
 
   return (
