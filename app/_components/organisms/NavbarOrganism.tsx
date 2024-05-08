@@ -17,10 +17,9 @@ export default function NavbarOrganism({ }: Props) {
               <li><LinkAtom url="/contact">Contact</LinkAtom></li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">edwardlayao.dev</a>
         </div>
         <div className="navbar-end hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 text-neutral text-2xl">
             <li><LinkAtom url="/projects">Projects</LinkAtom></li>
             <li><LinkAtom url="/contact">Contact</LinkAtom></li>
           </ul>
