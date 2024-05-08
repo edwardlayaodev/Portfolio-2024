@@ -1,11 +1,12 @@
-import Image from "next/image";
+"use client"
+import { useState } from "react";
+import PortraitAnimOrganism from "./_components/organisms/PortraitAnimOrganism";
 
 export default function Home() {
   return (
-    <div className="hero min-h-screen bg-base-200">
-      <div className="mockup-code text-left w-1/2">
-        <pre data-prefix="$" className="text-primary"><code>helloGreeting()</code></pre>
-        <pre data-prefix=">"><code>Greetings!, my name Is Edward Layao!</code></pre>
+    <div className="bg-base-100 text-base-content">
+      <div className="flex flex-col-reverse justify-center items-center md:flex-row text-center pt-24">
+        <PortraitAnimOrganism />
       </div>
     </div>
   );
