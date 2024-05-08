@@ -3,6 +3,7 @@ import { Roboto } from "next/font/google"
 import "./globals.css";
 import { ModalProvider } from "./_context/ModalContext";
 import ModalAtom from "./_components/atoms/ModalAtom";
+import CardAtom from "./_components/atoms/CardAtom";
 import NavbarOrganism from "./_components/organisms/NavbarOrganism";
 
 const roboto = Roboto({ weight: "400", subsets: ['latin'] });

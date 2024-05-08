@@ -14,7 +14,6 @@ describe('navbar Component', () => {
   //   expect(brand).toBeInTheDocument()
   // })
 
-
   it('renders the links properly', () => {
     const contact = component.getAllByText("Contact")
     const project = component.getAllByText("Projects")
